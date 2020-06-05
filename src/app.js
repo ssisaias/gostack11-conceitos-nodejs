@@ -61,7 +61,7 @@ app.put("/repositories/:id", (request, response) => {
   repositories[response.locals.foundRepoIndex].title = title;
   repositories[response.locals.foundRepoIndex].url = url;
   repositories[response.locals.foundRepoIndex].techs = techs;
-  response.sendStatus(200);
+  response.send(repositories[response.locals.foundRepoIndex]);
 });
 
 app.delete("/repositories/:id", (request, response) => {
