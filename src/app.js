@@ -67,7 +67,7 @@ app.put("/repositories/:id", (request, response) => {
 app.delete("/repositories/:id", (request, response) => {
   if(repositories[response.locals.foundRepoIndex]){
    repositories.splice(response.locals.foundRepoIndex,1);
-   response.sendStatus(200);
+   response.sendStatus(204);
   }
 });
 
